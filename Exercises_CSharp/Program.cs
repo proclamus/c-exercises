@@ -1,0 +1,36 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace Exercises_CSharp
+{
+    class Program
+    {
+
+        public static List<int> countingSort(List<int> arr)
+        {
+            int tamanhoArr = arr.Count();
+            var arrCounter = new List<int>();
+
+            for (int n = 0; n < tamanhoArr; n++)
+            {
+                arrCounter.Add(0);
+            }
+
+            for (int i = 0; i < tamanhoArr; i++)
+            {
+                foreach (int a in arr)
+                {
+                    if (i == a)
+                    {
+                        arrCounter[i] = arrCounter[i] + 1;
+                    }
+                }
+            }
+
+            return arrCounter;
+
+        }
+
+    }
+}
