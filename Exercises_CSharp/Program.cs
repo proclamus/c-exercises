@@ -32,5 +32,51 @@ namespace Exercises_CSharp
 
         }
 
+        public static void fizzBuzz(int n)
+        {
+            for (int i = 1; i <= n; i++)
+            {
+                if (i % 3 == 0 && i % 5 == 0)
+                {
+                    Console.WriteLine("FizzBuzz");
+                }
+                else if (i % 3 == 0)
+                {
+                    Console.WriteLine("Fizz");
+                }
+                else if (i % 5 == 0)
+                {
+                    Console.WriteLine("Buzz");
+                }
+                else
+                {
+                    Console.WriteLine(i);
+                }
+            }
+
+            static int FlippingMatrix(List<List<int>> matrix)
+            {
+                int sum = 0;
+                int n = matrix.Count;
+
+                for (int i = 0; i < n / 2; i++)
+                {
+                    for (int j = 0; j < n / 2; j++)
+                    {
+                        sum +=
+                            Math.Max(matrix[i][j],
+                                (Math.Max(matrix[i][n - 1 - j],
+                                        (Math.Max(matrix[n - 1 - i][j], matrix[n - 1 - i][n - 1 - j]))
+                                    )
+                                )
+                            );
+                    }
+                }
+                return sum;
+            }
+        }
+
+
+
     }
 }
