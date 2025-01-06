@@ -1,0 +1,12 @@
+public static void plusMinus(List<int> arr)
+    {
+        float positives= arr.Count(x => x > 0);
+        float negatives= arr.Count(x => x < 0);
+        float zero= arr.Count(x => x == 0);
+    
+        float countArr = arr.Count();
+        
+        Console.WriteLine((positives/countArr).ToString("0.000000"));
+        Console.WriteLine((negatives/countArr).ToString("0.000000"));
+        Console.WriteLine((zero/countArr).ToString("0.000000"));
+    }
