@@ -1,0 +1,23 @@
+public static List<int> countingSort(List<int> arr)
+    {
+        var arrCounter = new List<int>();
+        
+        for(int n=0;n< 100;n++)
+        {
+            arrCounter.Add(0);
+        }
+        
+        for(int i = 0; i <100; i++)
+        {
+            foreach(int a in arr)
+            {                
+                if(i==a)
+                {
+                    arrCounter[i] = arrCounter[i] + 1;
+                }
+            }
+        }
+    
+        return arrCounter;
+      
+    }
