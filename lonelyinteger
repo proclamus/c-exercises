@@ -1,0 +1,24 @@
+ public static int lonelyinteger(List<int> a)
+    {
+        int contador=0;
+        int resultado=0;
+        foreach (int numero in a)
+        {
+            for(int i = 0; i<a.Count;i++)
+            {
+                if(a[i]==numero)
+                {
+                    contador++;
+                }
+            }
+            if(contador==1)
+            {
+                resultado=numero;
+            }
+            else{
+               contador=0; 
+            }           
+            
+        }
+        return resultado;
+    }
