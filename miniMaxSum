@@ -1,0 +1,36 @@
+  public static void miniMaxSum(List<int> arr)
+    {
+        long maxSum = 0;
+        long minSum = 0;
+        
+        for(int i = 0; i < arr.Count; i++)
+        {
+            if(maxSum==0)
+            {
+                maxSum = arr.Sum(x => (long)x) - arr[i];
+            }
+            else
+            {
+                long novoNumero = arr.Sum(x => (long)x) - arr[i];
+                if (novoNumero > maxSum)
+                {
+                    maxSum = novoNumero;
+                }
+            }
+            
+            if(minSum ==0)
+            {
+                minSum = arr.Sum(x => (long)x) - arr[i];
+            }
+            else
+            {
+                long novoNumero = arr.Sum(x => (long)x) - arr[i];
+                if (novoNumero < minSum)
+                {
+                    minSum = novoNumero;
+                }                
+            }
+            
+        }
+        Console.WriteLine(minSum+" "+maxSum);
+    }
