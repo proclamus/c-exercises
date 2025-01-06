@@ -1,0 +1,8 @@
+ public static string timeConversion(string s)
+    {
+        DateTime hourNewFormat;
+        hourNewFormat = Convert.ToDateTime(s);
+        s = hourNewFormat.ToString("HH:mm:ss");
+        
+        return s;
+    }
