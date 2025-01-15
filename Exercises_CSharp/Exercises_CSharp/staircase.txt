@@ -1,0 +1,27 @@
+public static void staircase(int n)
+    {
+        string[,] staircase = new string[n,n];
+        var degrau = n-1;
+        
+        
+        for(int i=0;i<n;i++)
+        {
+            
+            for(int j=0;j<n;j++)
+            {
+                
+                if(j>=degrau)
+                {     
+                              
+                    staircase[i,j]=$"#";
+                }
+                else{
+                    staircase[i,j]=$" ";
+                }
+                Console.Write(staircase[i,j]);
+            }
+            degrau--;
+            Console.Write("\n");
+        }
+        
+    }
